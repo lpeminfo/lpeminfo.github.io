@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Awesome Self</title>
+  <title>My Website</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,28 +11,50 @@
   </header>
 
   <section id="hero">
-    <img id="main-image" src="" alt="My Pokémon" />
-    <p id="intro-text">Hello, I am NAME and this Pokémon fits me the best!</p>
+    <img id="pokemon-image" src="" alt="My Pokémon Partner" />
+    <p id="intro-text">Hi! I'm NAME and this is my programming buddy!</p>
   </section>
 
-  <section id="features">
-    <div class="feature-card">
-      <img id="food-image" src="" alt="Favorite Food" />
-      <p id="food-text">Favorite food description</p>
+  <section id="trivia">
+    <div class="trivia-card">
+      <p>Can you guess my favorite food?</p>
+      <button onclick="showImage('food-image')">Show</button> <br>
+      <img id="food-image" class="hidden" src="" alt="Favorite Food" />
     </div>
-    <div class="feature-card">
-      <img id="animal-image" src="" alt="Favorite Animal" />
-      <p id="animal-text">Favorite animal description</p>
+    <div class="trivia-card">
+      <p>Can you guess my favorite animal?</p>
+      <button onclick="showImage('animal-image')">Show</button> <br>
+      <img id="animal-image" class="hidden" src="" alt="Favorite Animal" />
     </div>
-    <div class="feature-card">
-      <img id="job-image" src="" alt="Future Job" />
-      <p id="job-text">Future job wish</p>
+    <div class="trivia-card">
+      <p>What do I want to be when I grow up?</p>
+      <button onclick="showImage('job-image')">Show</button> <br>
+      <img id="job-image" class="hidden" src="" alt="Future Job" />
     </div>
   </section>
-
-  <button id="action-button">Click Me!</button>
 
   <script src="params.js"></script>
-  <script src="script.js"></script>
+  <script>
+    // Apply styles
+    document.documentElement.style.setProperty('--bg-color', settings.bgColor);
+    document.documentElement.style.setProperty('--text-color', settings.textColor);
+    document.documentElement.style.setProperty('--header-bg', settings.headerBg);
+    document.documentElement.style.setProperty('--border-color', settings.borderColor);
+
+    // Set texts and images
+    document.getElementById("header-text").textContent = settings.headerText;
+    document.getElementById("pokemon-image").src = settings.pokemonImage;
+    document.getElementById("intro-text").textContent = `Hi! I'm ${settings.kidName} and this is my programming buddy!`;
+
+    document.getElementById("food-image").src = settings.foodImage;
+    document.getElementById("animal-image").src = settings.animalImage;
+    document.getElementById("job-image").src = settings.jobImage;
+
+    // Toggle image visibility
+    function showImage(id) {
+      const img = document.getElementById(id);
+      img.classList.toggle("hidden");
+    }
+  </script>
 </body>
 </html>

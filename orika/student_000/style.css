@@ -15,11 +15,11 @@ header {
 
 h1 {
   margin: 0;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 #hero {
-  padding: 40px 20px;
+  padding: 30px 20px;
   background: #fff8dc;
 }
 
@@ -27,55 +27,55 @@ h1 {
   width: 250px;
   border-radius: 20px;
   border: 8px solid var(--border-color);
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 #intro-text {
-  font-size: 1.5em;
+  font-size: 1.4em;
   margin-top: 20px;
 }
 
-#features {
+#trivia {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* space between cards */
   padding: 40px 20px;
 }
 
-.feature-card {
+.trivia-card {
   background: #e0f7fa;
   border: 4px dashed var(--border-color);
   border-radius: 20px;
   padding: 20px;
-  width: 250px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.feature-card img {
-  width: 100%;
-  border-radius: 15px;
+
+.trivia-card p {
+  font-size: 1.2em;
   margin-bottom: 10px;
 }
 
-.feature-card p {
-  font-size: 1.2em;
+.trivia-card img {
+  width: 50%;
+  margin-top: 15px;
+  border-radius: 15px;
+}
+
+.hidden {
+  display: none;
 }
 
 button {
-  background-color: var(--button-bg);
-  color: var(--button-text);
+  background-color: #32cd32;
+  color: white;
   border: none;
-  padding: 15px 30px;
-  font-size: 1.5em;
-  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border-radius: 15px;
   cursor: pointer;
-  margin: 40px auto;
-  display: block;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease;
-}
-
-button:hover {
-  transform: scale(1.05);
 }
