@@ -17,28 +17,29 @@
 
   <section id="trivia">
     <div class="trivia-card">
-      <p>Can you guess my favorite food?</p>
+      <p>Kannst du das beste Essen auf der Welt erraten?</p>
       <button onclick="showImage('food-image')">Show</button> <br>
       <img id="food-image" class="hidden" src="" alt="Favorite Food" />
     </div>
     <div class="trivia-card">
-      <p>Can you guess my favorite animal?</p>
+      <p>Kannst du das coolste Tier erraten?</p>
       <button onclick="showImage('animal-image')">Show</button> <br>
       <img id="animal-image" class="hidden" src="" alt="Favorite Animal" />
     </div>
     <div class="trivia-card">
-      <p>What do I want to be when I grow up?</p>
-      <button onclick="showImage('job-image')">Show</button> <br>
-      <img id="job-image" class="hidden" src="" alt="Future Job" />
+      <p>Versuche diese Rätsel zu lösen!</p>
+      <div id="emoji-quiz" class="emoji-quiz"></div>
+      <button onclick="showText('emoji-answer')">Show Answer</button> <br>
+      <p id="emoji-answer" class="hidden answer-text"></p>
     </div>
   </section>
 
   <script src="params.js"></script>
   <script>
     // Apply styles
-    document.documentElement.style.setProperty('--bg-color', settings.bgColor);
+    document.documentElement.style.setProperty('--bg-color', settings.backgroundColor);
     document.documentElement.style.setProperty('--text-color', settings.textColor);
-    document.documentElement.style.setProperty('--header-bg', settings.headerBg);
+    document.documentElement.style.setProperty('--header-bg', settings.headerBackground);
     document.documentElement.style.setProperty('--border-color', settings.borderColor);
 
     // Set texts and images
@@ -48,12 +49,29 @@
 
     document.getElementById("food-image").src = settings.foodImage;
     document.getElementById("animal-image").src = settings.animalImage;
-    document.getElementById("job-image").src = settings.jobImage;
+
+    // Set emoji quiz emojis (visible by default)
+    document.getElementById("emoji-quiz").textContent = settings.emojiQuizEmojis;
+
+    // Set emoji quiz answer text (hidden initially)
+    document.getElementById("emoji-answer").textContent = settings.emojiQuizAnswer;
+
+// Toggle answer text visibility
+function showText(id) {
+  const elem = document.getElementById(id);
+  elem.classList.toggle("hidden");
+}
 
     // Toggle image visibility
     function showImage(id) {
       const img = document.getElementById(id);
       img.classList.toggle("hidden");
+    }
+
+    // Toggle emoji quiz visibility
+    function showEmoji(id) {
+      const elem = document.getElementById(id);
+      elem.classList.toggle("hidden");
     }
   </script>
 </body>
