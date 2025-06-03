@@ -1,0 +1,93 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: var(--header-bg);
+  padding: 20px;
+  border-bottom: 5px solid var(--border-color);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+#hero {
+  padding: 30px 20px;
+  background: #fff8dc;
+}
+
+#hero img {
+  width: 250px;
+  border-radius: 20px;
+  border: 8px solid var(--border-color);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#intro-text {
+  font-size: 1.4em;
+  margin-top: 20px;
+}
+
+#trivia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* space between cards */
+  padding: 40px 20px;
+}
+
+.trivia-card {
+  background: #e0f7fa;
+  border: 4px dashed var(--border-color);
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.trivia-card p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.trivia-card img {
+  width: 50%;
+  margin-top: 15px;
+  border-radius: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  background-color: #32cd32;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.emoji-quiz {
+  font-size: 3em;
+  margin-top: 15px;
+  user-select: none;
+}
+
+.answer-text {
+  font-size: 1.8em;
+  color: #ff4500;
+  margin-top: 15px;
+  font-weight: bold;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="header-text">Welcome!</h1>
+  </header>
+
+  <section id="hero">
+    <img id="pokemon-image" src="" alt="My Pokémon Partner" />
+    <img id="pokemon-image2" src="" alt="My Pokémon Partner" />
+    <p id="intro-text">Hi! I'm NAME and this is my programming buddy!</p>
+  </section>
+
+  <section id="trivia">
+    <div class="trivia-card">
+      <p>Kannst du das beste Essen auf der Welt erraten?</p>
+      <button onclick="showImage('food-image')">Show</button> <br>
+      <img id="food-image" class="hidden" src="" alt="Favorite Food" />
+    </div>
+    <div class="trivia-card">
+      <p>Kannst du das coolste Tier erraten?</p>
+      <button onclick="showImage('animal-image')">Show</button> <br>
+      <img id="animal-image" class="hidden" src="" alt="Favorite Animal" />
+    </div>
+    <div class="trivia-card">
+      <p>Versuche diese Rätsel zu lösen!</p>
+      <div id="emoji-quiz" class="emoji-quiz"></div>
+      <button onclick="showText('emoji-answer')">Show Answer</button> <br>
+      <p id="emoji-answer" class="hidden answer-text"></p>
+    </div>
+  </section>
+
+  <script src="params.js"></script>
+  <script>
+    // Apply styles
+    document.documentElement.style.setProperty('--bg-color', settings.backgroundColor);
+    document.documentElement.style.setProperty('--text-color', settings.textColor);
+    document.documentElement.style.setProperty('--header-bg', settings.headerBackground);
+    document.documentElement.style.setProperty('--border-color', settings.borderColor);
+
+    // Set texts and images
+    document.getElementById("header-text").textContent = settings.headerText;
+    document.getElementById("pokemon-image").src = settings.pokemonImage;
+    document.getElementById("pokemon-image2").src = settings.pokemonImage2;
+    document.getElementById("intro-text").textContent = `Hi! I'm ${settings.kidName} and this is my programming buddy!`;
+
+    document.getElementById("food-image").src = settings.foodImage;
+    document.getElementById("animal-image").src = settings.animalImage;
+
+    // Set emoji quiz emojis (visible by default)
+    document.getElementById("emoji-quiz").textContent = settings.emojiQuizEmojis;
+
+    // Set emoji quiz answer text (hidden initially)
+    document.getElementById("emoji-answer").textContent = settings.emojiQuizAnswer;
+
+// Toggle answer text visibility
+function showText(id) {
+  const elem = document.getElementById(id);
+  elem.classList.toggle("hidden");
+}
+
+    // Toggle image visibility
+    function showImage(id) {
+      const img = document.getElementById(id);
+      img.classList.toggle("hidden");
+    }
+
+    // Toggle emoji quiz visibility
+    function showEmoji(id) {
+      const elem = document.getElementById(id);
+      elem.classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
