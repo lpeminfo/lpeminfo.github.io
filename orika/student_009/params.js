@@ -14,7 +14,7 @@ const settings = {
 
   // Trivia answers
   foodImage: "../images/food/pasta.jpg",
-  animalImage: "../images/animals/bulldog.jpg",
+  animalImage: "../images/animals/dog1.jpg",
 
   // Emoji quiz sentence (replace with any emojis you want)
   emojiQuizEmojis: "\u{1f43b}\u{1f929}\u{23f0}",
