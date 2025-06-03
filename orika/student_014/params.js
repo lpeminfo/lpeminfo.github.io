@@ -10,7 +10,7 @@ const settings = {
   borderColor: "#ff69b4",
 
   // Pokémon partner
-  pokemonImage: "../images/pokemon/piplup.gif",
+  pokemonImage: "../images/pokemon/Piplup.gif",
 
   // Trivia answers
   foodImage: "../images/food/watermelon.jpg",

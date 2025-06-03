@@ -10,8 +10,8 @@ const settings = {
   borderColor: "#000000",
 
   // Pokémon partner
-  pokemonImage: "../images/pokemon/charizard.gif",
-  pokemonImage2: "../images/pokemon/bulbasaur.gif",
+  pokemonImage: "../images/pokemon/Charizard.gif",
+  pokemonImage2: "../images/pokemon/Bulbasaur.gif",
 
   // Trivia answers
   foodImage: "../images/food/burger.jpg",
