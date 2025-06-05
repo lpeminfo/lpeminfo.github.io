@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>My Website</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header>
+    <a href="https://lpem.lu/offre-scolaire/formation-professionnelle-a-plein-temps/dt-diplome-de-technicien/information-technology-ifi/">
+      <img src="../images/lpem_logo.png" alt="LPEM Logo" id="lpem-logo" />
+    </a>
     <h1 id="header-text">Welcome!</h1>
   </header>
 
@@ -56,11 +61,11 @@
     // Set emoji quiz answer text (hidden initially)
     document.getElementById("emoji-answer").textContent = settings.emojiQuizAnswer;
 
-// Toggle answer text visibility
-function showText(id) {
-  const elem = document.getElementById(id);
-  elem.classList.toggle("hidden");
-}
+    // Toggle answer text visibility
+    function showText(id) {
+      const elem = document.getElementById(id);
+      elem.classList.toggle("hidden");
+    }
 
     // Toggle image visibility
     function showImage(id) {
@@ -74,5 +79,11 @@ function showText(id) {
       elem.classList.toggle("hidden");
     }
   </script>
+
+  <footer style="font-size: 0.8em; text-align: center; padding: 1em; color: #666;">
+    Images from Pixabay.com used under Pixabay License. Pokémon content © Nintendo/Game Freak. Used for educational,
+    non-commercial purposes only.
+  </footer>
 </body>
+
 </html>
